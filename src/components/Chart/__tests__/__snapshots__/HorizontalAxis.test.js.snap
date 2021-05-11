@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HorizontalAxis /> does not render ticks when \`TEST_PROPS.data\` is [] 1`] = `
+<div
+  class="sc-bdVaJa sc-bwzfXH efsMjw"
+  data-testid="HorizontalAxis"
+/>
+`;
+
+exports[`<HorizontalAxis /> renders without crashing 1`] = `
+<div
+  class="sc-bdVaJa sc-bwzfXH efsMjw"
+  data-testid="HorizontalAxis"
+>
+  <div
+    class="sc-htpNat cghrJv"
+  >
+    04:16 PM
+  </div>
+  <div
+    class="sc-htpNat cghrJv"
+  >
+    05:15 PM
+  </div>
+  <div
+    class="sc-htpNat cghrJv"
+  >
+    06:13 PM
+  </div>
+</div>
+`;

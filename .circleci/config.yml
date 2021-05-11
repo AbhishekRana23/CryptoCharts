@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Run Linter & Prettier
+          command: yarn run check
+      - run:
+          name: Run Unit Test Suite
+          command: yarn test:ci
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Upload Unit Test Coverage Report
+          command: ./node_modules/.bin/codecov

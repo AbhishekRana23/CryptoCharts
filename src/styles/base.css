@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("https://fonts.googleapis.com/css?family=Ubuntu");
+}
+
+body {
+  background-image: linear-gradient(to bottom, #2f4f4f , #2f4f4f);
+  background-attachment: fixed;
+  height: 100vh;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
