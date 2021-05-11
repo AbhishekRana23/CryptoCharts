@@ -1,3 +1,8 @@
+Project Url
+```shell
+https://crypto-charts.vercel.app/
+```
+
 ## About
 
 Coincharts is a cryptocurrency price chart based off [Coinbase](https://www.coinbase.com/)'s original price chart on [https://www.coinbase.com/charts](https://web.archive.org/web/20190331085909/https://www.coinbase.com/charts)
