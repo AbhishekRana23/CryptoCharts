@@ -8,13 +8,13 @@ import { LOCAL_JSON_DATA_DIR } from "../constants";
 axios.defaults.headers["CB-VERSION"] = process.env.REACT_APP_COINBASE_API_CB_VERSION || "2018-04-13";
 
 function getPriceHistoryUrl(cryptocurrency, currency, durationType) {
-  return process.env.NODE_ENV === "production"
+  return process.env.NODE_ENV !== "production"
     ? `${LOCAL_JSON_DATA_DIR}/${cryptocurrency}-${currency}-${durationType}.json`
     : `https://www.coinbase.com/api/v2/prices/${cryptocurrency}-${currency}/historic?period=${durationType}`;
 }
 
 function getSpotPriceUrl(currency) {
-  return process.env.NODE_ENV === "production"
+  return process.env.NODE_ENV !== "production"
     ? `${LOCAL_JSON_DATA_DIR}/${currency}-spot.json`
     : `https://api.coinbase.com/v2/prices/${currency}/spot?`;
 }
