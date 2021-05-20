@@ -1,4 +1,4 @@
-export const CURRENCY_DEFAULT = "INR";
+export const CURRENCY_DEFAULT = "USD";
 export const CURRENCY = {
   CAD: { key: "CAD", name: "Canadian Dollar" },
   USD: { key: "USD", name: "US Dollar" },

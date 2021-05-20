@@ -16,8 +16,8 @@ const StyledFooter = styled.div`
 
 const Footer = props => (
   <StyledFooter {...props}>
-    <div> Abhishek's And Aditya's Project
-    <span role="img" aria-label="fire"> 🔥</span> 
+    <div> Made With 
+    <span role="img" aria-label="heart"> ❤️ </span> In India 
    </div>
   </StyledFooter>
 );
